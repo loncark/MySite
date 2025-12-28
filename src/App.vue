@@ -1,19 +1,11 @@
 <template>
-  <main>
-    <h1>Welcome to MySite</h1>
-    <HelloWorld msg="Hello Vue 3 + Vite!" />
-  </main>
+    <Root/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Root from './components/Root.vue'
 export default {
   name: 'App',
-  components: { HelloWorld }
+  components: { Root }
 }
 </script>
-
-<style>
-body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; }
-h1 { color: #42b983; }
-</style>

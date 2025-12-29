@@ -1,6 +1,6 @@
 <template>
     <div id="petals-container">
-        <div v-for="i in 150" :key="i" class="petal"></div>
+        <div v-for="i in 500" :key="i" class="petal"></div>
     </div>
 </template>
 
@@ -23,11 +23,13 @@ function animatePetals() {
     petal.innerHTML = '<div class="rotate"><img src="https://qqz.works/wp-content/uploads/2021/08/petal.png" class="askew"></div>';
     const scale = Math.random() * .8 + .2;
     const rotateElement = petal.querySelector('.rotate');
+    const randomStartX = Math.random() * 100; // Random X position from 0 to 100vw
+    const randomDriftX = (Math.random() - 0.5) * 50; // Random drift amount
 
     // Falling animation on the petal container
     const player = petal.animate([
-      { transform: 'translate3d(' + (i/len*100) + 'vw,0,0) scale(' + scale + ')', opacity: scale },
-      { transform: 'translate3d(' + (i/len*100 + 10) + 'vw,150vh,0) scale(' + scale + ')', opacity: 1 }
+      { transform: 'translate3d(' + randomStartX + 'vw,-300px,0) scale(' + scale + ')', opacity: scale },
+      { transform: 'translate3d(' + (randomStartX + randomDriftX) + 'vw,150vh,0) scale(' + scale + ')', opacity: 1 }
     ], {
       duration: Math.random() * 90000 + 3000,
       iterations: Infinity,

@@ -1,11 +1,11 @@
 <template>
     <div class="flex items-center justify-center min-h-screen">
-        <p >Hello, my name is Kristina.</p>
+      <Background />
+      <p>Hello, my name is Kristina.</p>
     </div>
 </template>
 
-<script>
-export default {
-  name: 'Root',
-}
+<script setup>
+import Background from './Background.vue';
+
 </script>

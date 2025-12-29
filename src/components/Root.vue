@@ -1,11 +1,11 @@
 <template>
     <div class="flex items-center justify-center min-h-screen">
       <Background />
-      <GlassCard/>
+      <GlassCardIntro/>
     </div>
 </template>
 
 <script setup>
 import Background from './Background.vue';
-import GlassCard from './GlassCard.vue';
+import GlassCardIntro from './GlassCardIntro.vue';
 </script>

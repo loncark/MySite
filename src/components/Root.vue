@@ -2,13 +2,24 @@
     <div class="root-container">
       <Background />
 
-      <div class="glass-card">
-        <p v-if="showFirstCard">Hello, my name is Kristina.</p>
-        <p v-else-if="secondCardWrapper" >Welcome to my website!</p>
-        <div v-else-if="thirdCardWrapper" class="main-content">
-          I'm a software developer and this site is a lil' side project.
+      <Transition name="fade" mode="out-in">
+        <div v-if="showFirstCard" key="first" class="glass-card">
+          <p>Hello, my name is Kristina.</p>
         </div>
-      </div>
+        <div v-else-if="secondCardWrapper" key="second" class="glass-card">
+          <p>Welcome to my website!</p>
+        </div>
+        <div v-else key="third" class="glass-card">
+          <div class="main-content">
+            <div class="left-side">
+              Here a picture with basic data will go.
+            </div>
+            <div class="right-side">
+              Here we'll put some work experience.
+            </div>
+          </div>
+        </div>
+      </Transition>
 
     </div>
 </template>
@@ -51,6 +62,9 @@ onMounted(() => {
   padding: 10px 20px 10px 20px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
+.glass-card .padding-special {
+  padding: 20px;
+}
 
 .glass-card > p {
   margin: 0;
@@ -60,9 +74,28 @@ onMounted(() => {
 .main-content {
   width: 80vw;
   height: 80vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
 }
+
+.left-side {
+  height: 100%;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+/* Fade transition styles */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 </style>

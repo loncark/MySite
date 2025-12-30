@@ -16,3 +16,6 @@
 import Background from './Background.vue';
 import GlassCardWrapper from './GlassCardWrapper.vue';
 </script>
+
+<style scoped>
+</style>

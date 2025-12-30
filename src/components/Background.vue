@@ -1,6 +1,6 @@
 <template>
     <div id="petals-container">
-        <div v-for="i in 500" :key="i" class="petal"></div>
+        <div v-for="i in 300" :key="i" class="petal"></div>
     </div>
 </template>
 
@@ -31,7 +31,7 @@ function animatePetals() {
       { transform: 'translate3d(' + randomStartX + 'vw,-300px,0) scale(' + scale + ')', opacity: scale },
       { transform: 'translate3d(' + (randomStartX + randomDriftX) + 'vw,150vh,0) scale(' + scale + ')', opacity: 1 }
     ], {
-      duration: Math.random() * 90000 + 3000,
+      duration: Math.random() * 90000 + 6000,
       iterations: Infinity,
       delay: -(Math.random() * 5000)
     });
@@ -47,7 +47,7 @@ function animatePetals() {
         iterations: Infinity
       });
 
-      // Drift animation on the askew element
+      //Drift animation on the askew element
       const askewElement = petal.querySelector('.askew');
       if (askewElement) {
         const driftDuration = Math.random() * 2000 + 2000;
@@ -74,7 +74,10 @@ onMounted(() => {
 
 <style scoped>
 #petals-container {
-  background: linear-gradient(#A8E0FF, #A2E8F6, #F8EDCC);
+  /* background: linear-gradient(#A8E0FF, #A2E8F6, #F8EDCC); */
+  background: url('/assets/bcg3.jpg');
+  background-size: cover;
+  background-position: center;
   position: fixed;
   top: 0;
   left: 0;

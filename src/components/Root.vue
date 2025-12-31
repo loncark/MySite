@@ -74,22 +74,21 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import Background from './Background.vue';
-import { Image } from 'primevue';
 
-const showFirstCard = ref(false);   // true
+const showFirstCard = ref(true); 
 const secondCardWrapper = ref(false);
-const thirdCardWrapper = ref(true);
+const thirdCardWrapper = ref(false);
 
 onMounted(() => {
-  // setTimeout(() => {
-  //   showFirstCard.value = false;
-  //   secondCardWrapper.value = true;
-  // }, 3000);
+  setTimeout(() => {
+    showFirstCard.value = false;
+    secondCardWrapper.value = true;
+  }, 3000);
   
-  // setTimeout(() => {
-  //   secondCardWrapper.value = false;
-  //   thirdCardWrapper.value = true;
-  // }, 6000);
+  setTimeout(() => {
+    secondCardWrapper.value = false;
+    thirdCardWrapper.value = true;
+  }, 6000);
 });
 </script>
 

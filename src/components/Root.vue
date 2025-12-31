@@ -12,7 +12,7 @@
         <div v-else key="third" class="glass-card">
           <div class="main-content">
             <div class="left-side">
-              <img src="/home/kristina/Documents/Programs/MySite/public/assets/profile_cropped.png" alt="Profile Picture" class="profile-pic"/>
+              <img src="/assets/profile_cropped.png" alt="Profile Picture" class="profile-pic"/>
               <p class="text-2xl w-full text-center font-bold">Kristina Lončar</p>
               <div class="grid grid-cols-2 grid-rows-3 gap-2 mt-4 mx-auto">
                 <span class="text-right">Age:</span>

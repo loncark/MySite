@@ -25,17 +25,19 @@
                 <span>Zagreb <span title="Croatia">🇭🇷</span></span>
 
                 <span class="text-right">GitHub:</span>
-                <span>loncark</span>
+                <a href="https://github.com/loncark" target="_blank" rel="noopener noreferrer">
+                  <i class="pi pi-github"></i> loncark 
+                </a>
 
                 <span class="text-right">Worldview:</span>
                 <span>Optimistic</span>
 
                 <span class="text-right">Status:</span>
-                <span>Happy!</span>
+                <span>😊🙏🎉</span>
               </div>
             </div>
             <div class="right-side mt-2">
-              <div class="flex flex-col gap-2">
+              <div class="flex flex-col gap-2 mt-4">
                 <p class="text-xl font-bold">Education</p>
                 <div class="pl-4">
                   <p class="text-l font-bold">Bachelor in Mathematics</p>
@@ -47,20 +49,15 @@
                 </div>
               </div>
 
-              <div class="flex flex-col gap-2 mt-4">
+              <div class="flex flex-col gap-2 mt-8">
                 <p class="text-xl font-bold">Work Experience</p>
                 <div class="pl-4">
                   <p class="text-l font-bold">Junior Software Developer</p>
-                  <p >Combis d.o.o. [2024 - Present]</p>
-                  <p class="mt-4 ">Skills:</p>
-                  <ul class="list-disc list-inside pl-4">
-                    <li>Backend: C# .NET</li>
-                    <li>Frontend: Vue 2 + JS / Vue 3 + TS</li>
-                    <li>Microsoft Dynamics 365 CRM</li>
-                    <li>Business Analytics</li>
-                    <li>Customer Support</li>
-                  </ul>
-                </div>
+                  <p class="text-sm">Combis d.o.o. [2024 - Present]</p>
+                  <p class="mt-4 pr-6 text-sm break-words">The job includes creating/updating multiple external CRM-based projects yearly as well as manintaining and upgrading the internal company CRM and MojCombis web application.</p>
+                  <p class="mt-4 pr-6 text-sm break-words">This includes primarily MS Dynamics 365 CRM configuration and writing supplementary plugins, scripts, webjobs, workflows, Azure functions etc. according to customer needs as well as cyclical functionality analysis and adaptation.</p>
+                  <p class="mt-4 pr-6 text-sm break-words">All this is done with the help and cooperation of an amazing dev team.</p>
+                  </div>
               </div>
 
             </div>
@@ -75,21 +72,21 @@
 import { onMounted, ref } from 'vue';
 import Background from './Background.vue';
 
-const showFirstCard = ref(true); 
+const showFirstCard = ref(false);   // true
 const secondCardWrapper = ref(false);
-const thirdCardWrapper = ref(false);
+const thirdCardWrapper = ref(true);
 
-onMounted(() => {
-  setTimeout(() => {
-    showFirstCard.value = false;
-    secondCardWrapper.value = true;
-  }, 3000);
+// onMounted(() => {
+//   setTimeout(() => {
+//     showFirstCard.value = false;
+//     secondCardWrapper.value = true;
+//   }, 3000);
   
-  setTimeout(() => {
-    secondCardWrapper.value = false;
-    thirdCardWrapper.value = true;
-  }, 6000);
-});
+//   setTimeout(() => {
+//     secondCardWrapper.value = false;
+//     thirdCardWrapper.value = true;
+//   }, 6000);
+// });
 </script>
 
 <style scoped>

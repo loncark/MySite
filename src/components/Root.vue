@@ -1,92 +1,43 @@
 <template>
-    <div class="root-container">
-      <Background />
+  <div class="root-container">
+    <Background />
 
-      <Transition name="fade" mode="out-in">
-        <div v-if="showFirstCard" key="first" class="glass-card">
-          <p>Hello, my name is Kristina.</p>
-        </div>
-        <div v-else-if="secondCardWrapper" key="second" class="glass-card">
-          <p>Welcome to my website!</p>
-        </div>
-        <div v-else key="third" class="glass-card">
-          <div class="main-content">
-            <div class="left-side">
-              <img src="/assets/profile_cropped.png" alt="Profile Picture" class="profile-pic"/>
-              <p class="text-2xl w-full text-center font-bold">Kristina Lončar</p>
-              <div class="grid grid-cols-2 grid-rows-3 gap-2 mt-4 mx-auto">
-                <span class="text-right">Age:</span>
-                <span>Gen Z</span>
-
-                <span class="text-right">Occupation:</span>
-                <span>Software Dev</span>
-
-                <span class="text-right">Location:</span>
-                <span>Zagreb <span title="Croatia">🇭🇷</span></span>
-
-                <span class="text-right">GitHub:</span>
-                <a href="https://github.com/loncark" target="_blank" rel="noopener noreferrer">
-                  <i class="pi pi-github"></i> loncark 
-                </a>
-
-                <span class="text-right">Worldview:</span>
-                <span>Optimistic</span>
-
-                <span class="text-right">Status:</span>
-                <span>😊🙏🎉</span>
-              </div>
-            </div>
-            <div class="right-side mt-2">
-              <div class="flex flex-col gap-2 mt-4">
-                <p class="text-xl font-bold">Education</p>
-                <div class="pl-4">
-                  <p class="text-l font-bold">Bachelor in Mathematics</p>
-                  <p class="text-sm">University of Zagreb (Faculty of Science, Department of Mathematics) [2016 - 2022]</p>
-                </div>
-                <div class="pl-4">
-                  <p class="text-l font-bold">Master of Applied Computer Engineering</p>
-                  <p class="text-sm">Algebra Bernays University [2022 - 2024]</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-2 mt-8">
-                <p class="text-xl font-bold">Work Experience</p>
-                <div class="pl-4">
-                  <p class="text-l font-bold">Junior Software Developer</p>
-                  <p class="text-sm">Combis d.o.o. [2024 - Present]</p>
-                  <p class="mt-4 pr-6 text-sm break-words">The job includes creating/updating multiple external CRM-based projects yearly as well as manintaining and upgrading the internal company CRM and MojCombis web application.</p>
-                  <p class="mt-4 pr-6 text-sm break-words">This includes primarily MS Dynamics 365 CRM configuration and writing supplementary plugins, scripts, webjobs, workflows, Azure functions etc. according to customer needs as well as cyclical functionality analysis and adaptation.</p>
-                  <p class="mt-4 pr-6 text-sm break-words">All this is done with the help and cooperation of an amazing dev team.</p>
-                  </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </Transition>
-
-    </div>
+    <Transition name="fade" mode="out-in">
+      <div v-if="showFirstCard" key="first" class="glass-card padding-special">
+        <p>Hello, my name is Kristina.</p>
+      </div>
+      <div v-else-if="secondCardWrapper" key="second" class="glass-card padding-special">
+        <p>Welcome to my website!</p>
+      </div>
+      <div v-else key="third" class="main-content">
+        <StaticCard />
+        <Card1 />
+      </div>
+    </Transition>
+  </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-import Background from './Background.vue';
+import { onMounted, ref } from "vue";
+import Background from "./Background.vue";
+import StaticCard from "./StaticCard.vue";
+import Card1 from "./flip-cards/Card1.vue";
 
-const showFirstCard = ref(false);   // true
+const showFirstCard = ref(true); // true
 const secondCardWrapper = ref(false);
-const thirdCardWrapper = ref(true);
+const thirdCardWrapper = ref(false);
 
-// onMounted(() => {
-//   setTimeout(() => {
-//     showFirstCard.value = false;
-//     secondCardWrapper.value = true;
-//   }, 3000);
-  
-//   setTimeout(() => {
-//     secondCardWrapper.value = false;
-//     thirdCardWrapper.value = true;
-//   }, 6000);
-// });
+onMounted(() => {
+  setTimeout(() => {
+    showFirstCard.value = false;
+    secondCardWrapper.value = true;
+  }, 3000);
+
+  setTimeout(() => {
+    secondCardWrapper.value = false;
+    thirdCardWrapper.value = true;
+  }, 6000);
+});
 </script>
 
 <style scoped>
@@ -103,11 +54,11 @@ const thirdCardWrapper = ref(true);
   backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 10px 20px 10px 20px;
+  padding: 30px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
-.glass-card .padding-special {
-  padding: 20px;
+.padding-special {
+  padding: 10px 20px 10px 20px
 }
 
 .glass-card > p {
@@ -121,21 +72,10 @@ const thirdCardWrapper = ref(true);
   height: 600px;
   max-height: 80vh;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 28% 72%;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
-}
-
-.left-side {
-  height: 100%;
-  border-right: 1px solid black;
-  padding-right: 10px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 /* Fade transition styles */
@@ -148,13 +88,4 @@ const thirdCardWrapper = ref(true);
 .fade-leave-to {
   opacity: 0;
 }
-
-.profile-pic {
-  width: 80%;
-  aspect-ratio: 1 / 1;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 20px auto 20px auto;
-}
-
 </style>

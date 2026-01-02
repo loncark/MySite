@@ -11,14 +11,16 @@
       </div>
       <div v-else key="third" class="main-content">
         <StaticCard />
-        <Card1 
-          v-if="showCard1" 
-          @go-card2="showCard2 = true; showCard1 = false"
-        />
-        <Card2 
-          v-else-if="showCard2"
-          @go-card1="showCard1 = true; showCard2 = false"
-        />
+        <Transition name="swap" mode="out-in">
+          <Card1 
+            v-if="showCard1" 
+            @go-card2="showCard2 = true; showCard1 = false"
+          />
+          <Card2 
+            v-else-if="showCard2"
+            @go-card1="showCard1 = true; showCard2 = false"
+          />
+        </Transition>
       </div>
     </Transition>
   </div>
@@ -31,23 +33,23 @@ import StaticCard from "./StaticCard.vue";
 import Card1 from "./flip-cards/Card1.vue";
 import Card2 from "./flip-cards/Card2.vue";
 
-const showFirstScreen = ref(false); // true
+const showFirstScreen = ref(true); // true
 const showSecondScreen = ref(false);
-const showThirdScreen = ref(true);
+const showThirdScreen = ref(false);
 
 const showCard1 = ref(true);
 const showCard2 = ref(false);
 
 onMounted(() => {
-  // setTimeout(() => {
-  //   showFirstScreen.value = false;
-  //   showSecondScreen.value = true;
-  // }, 3000);
+  setTimeout(() => {
+    showFirstScreen.value = false;
+    showSecondScreen.value = true;
+  }, 3000);
 
-  // setTimeout(() => {
-  //   showSecondScreen.value = false;
-  //   showThirdScreen.value = true;
-  // }, 6000);
+  setTimeout(() => {
+    showSecondScreen.value = false;
+    showThirdScreen.value = true;
+  }, 6000);
 });
 </script>
 
@@ -97,6 +99,27 @@ onMounted(() => {
 
 .fade-enter-from,
 .fade-leave-to {
+  opacity: 0;
+}
+
+/* Swap transition styles */
+.swap-enter-active {
+  z-index: 0;
+  transition: all 0.15s ease;
+}
+
+.swap-leave-active {
+  z-index: 1;
+  transition: all 0.2s ease-out;
+}
+
+.swap-enter-from {
+  transform: translate(-5px, 5px); 
+  opacity: 0;
+}
+
+.swap-leave-to {
+  transform: translateX(20px);
   opacity: 0;
 }
 </style>

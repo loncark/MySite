@@ -55,7 +55,7 @@
 
     <div class="self-end mt-auto flex flex-row w-fit gap-2">
         <p class="button-class" @click="$emit('go-card1')">￩ Ed & Work</p>
-        <p class="button-class">Projects ￫</p>
+        <!-- <p class="button-class">Projects ￫</p> -->
     </div>
   </div>
 </template>

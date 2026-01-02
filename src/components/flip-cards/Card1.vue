@@ -1,3 +1,4 @@
+
 <template>
   <div class="right-side glass-card">
     <div class="flex flex-col gap-2">
@@ -37,8 +38,13 @@
         </p>
       </div>
     </div>
+
+    <p class="self-end mt-auto button-class" @click="$emit('go-card2')">Skills ￫</p>
   </div>
 </template>
+
+<script setup lang="ts">
+</script>
 
 <style scoped>
 .right-side {
@@ -48,5 +54,20 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 30px;
+}
+
+</style>
+
+<style>
+.button-class {
+  width: fit-content;
+  padding: 5px 10px 5px 10px;
+  font-size: small;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.button-class:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 </style>

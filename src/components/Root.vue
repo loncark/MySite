@@ -3,15 +3,22 @@
     <Background />
 
     <Transition name="fade" mode="out-in">
-      <div v-if="showFirstCard" key="first" class="glass-card padding-special">
+      <div v-if="showFirstScreen" key="first" class="glass-card padding-special">
         <p>Hello, my name is Kristina.</p>
       </div>
-      <div v-else-if="secondCardWrapper" key="second" class="glass-card padding-special">
+      <div v-else-if="showSecondScreen" key="second" class="glass-card padding-special">
         <p>Welcome to my website!</p>
       </div>
       <div v-else key="third" class="main-content">
         <StaticCard />
-        <Card1 />
+        <Card1 
+          v-if="showCard1" 
+          @go-card2="showCard2 = true; showCard1 = false"
+        />
+        <Card2 
+          v-else-if="showCard2"
+          @go-card1="showCard1 = true; showCard2 = false"
+        />
       </div>
     </Transition>
   </div>
@@ -22,21 +29,25 @@ import { onMounted, ref } from "vue";
 import Background from "./Background.vue";
 import StaticCard from "./StaticCard.vue";
 import Card1 from "./flip-cards/Card1.vue";
+import Card2 from "./flip-cards/Card2.vue";
 
-const showFirstCard = ref(true); // true
-const secondCardWrapper = ref(false);
-const thirdCardWrapper = ref(false);
+const showFirstScreen = ref(false); // true
+const showSecondScreen = ref(false);
+const showThirdScreen = ref(true);
+
+const showCard1 = ref(true);
+const showCard2 = ref(false);
 
 onMounted(() => {
-  setTimeout(() => {
-    showFirstCard.value = false;
-    secondCardWrapper.value = true;
-  }, 3000);
+  // setTimeout(() => {
+  //   showFirstScreen.value = false;
+  //   showSecondScreen.value = true;
+  // }, 3000);
 
-  setTimeout(() => {
-    secondCardWrapper.value = false;
-    thirdCardWrapper.value = true;
-  }, 6000);
+  // setTimeout(() => {
+  //   showSecondScreen.value = false;
+  //   showThirdScreen.value = true;
+  // }, 6000);
 });
 </script>
 

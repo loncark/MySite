@@ -59,7 +59,6 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 .glass-card {
@@ -121,5 +120,12 @@ onMounted(() => {
 .swap-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 </style>

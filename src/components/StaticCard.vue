@@ -7,16 +7,16 @@
     />
     <p class="text-2xl w-full text-center font-bold mt-6">Kristina Lončar</p>
     <div class="grid adaptable-grid gap-2 mt-4 mx-auto">
-      <span class="text-right">Age:</span>
+      <span>Age:</span>
       <span>Gen Z</span>
 
-      <span class="text-right">Occupation:</span>
+      <span>Occupation:</span>
       <span>Software Dev</span>
 
-      <span class="text-right">Location:</span>
+      <span>Location:</span>
       <span>Zagreb <span title="Croatia">🇭🇷</span></span>
 
-      <span class="text-right">GitHub:</span>
+      <span>GitHub:</span>
       <a
         href="https://github.com/loncark"
         target="_blank"
@@ -25,10 +25,10 @@
         <i class="pi pi-github"></i> loncark
       </a>
 
-      <span class="text-right">Worldview:</span>
+      <span>Worldview:</span>
       <span>Optimistic</span>
 
-      <span class="text-right">Status:</span>
+      <span>Status:</span>
       <span>😊🙏🎉</span>
     </div>
   </div>
@@ -53,13 +53,38 @@
 .adaptable-grid {
     grid-template-columns: 1fr 1fr;
 }
+.adaptable-grid > :nth-child(odd) {
+  text-align: right;
+}
+.adaptable-grid > :nth-child(even) {
+  text-align: left;
+}
 
 @media (max-width: 1040px) {
   .adaptable-grid {
     grid-template-columns: 1fr;
   }
-  .adaptable-grid span {
+  .adaptable-grid > :nth-child(odd) {
     text-align: center;
+  }
+  .adaptable-grid > :nth-child(even) {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-pic {
+    width: min(200px, 100%);
+    align-self: center;
+  }
+  .adaptable-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .adaptable-grid > :nth-child(odd) {
+    text-align: right;
+  }
+  .adaptable-grid > :nth-child(even) {
+    text-align: left;
   }
 }
 </style>

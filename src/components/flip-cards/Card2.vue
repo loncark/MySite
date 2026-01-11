@@ -5,30 +5,30 @@
       <div class="pl-4">
         <p class="text-l font-bold mt-2">Tech Stack</p>
         <div class="skill-grid-1">
-          <div class="skill">
+          <div class="skill" @click="$emit('dot-net')">
             <img src="/assets/tech-logos/dotnet_logo.png" alt=".NET" class="tech-img"/>
             <p class="skill-label">ASP .NET Core</p>
           </div>
-          <div class="skill">
+          <div class="skill" @click="$emit('vue')">
             <img src="/assets/tech-logos/vue_logo.png" alt="Vue" class="tech-img"/>
             <p class="skill-label">Vue.js 2/3</p>
           </div>
-          <div class="skill">
+          <div class="skill" @click="$emit('js')">
             <div class="flex flex-row align-center justify-center gap-2 self-center">
                 <img src="/assets/tech-logos/js_logo.png" alt="JS" style="height: 50px; border-radius: 5px; overflow: hidden;"/>
                 <img src="/assets/tech-logos/ts_logo.png" alt="TS" style="height: 50px;"/>
             </div>
             <p class="skill-label">JS / TS</p>
           </div>
-          <div class="skill">
+          <div class="skill" @click="$emit('git')">
             <img src="/assets/tech-logos/git_logo.svg" alt="Version" class="tech-img" style="height: 40px;"/>
             <p class="skill-label">Version Control</p>
           </div>
-          <div class="skill">
+          <div class="skill" @click="$emit('dynamics')">
             <img src="/assets/tech-logos/dynamics_logo.png" alt="MSD" class="tech-img"/>
             <p class="skill-label">Dynamics 365 CRM</p>
           </div>
-          <div class="skill">
+          <div class="skill" @click="$emit('azure')">
             <img src="/assets/tech-logos/azure_logo.png" alt="Azure" class="tech-img" style="height: 40px;"/>
             <p class="skill-label">Microsoft Azure</p>
           </div>
@@ -36,15 +36,15 @@
 
         <p class="mt-8 text-l font-bold">Other skills</p>
         <div class="skill-grid-2">
-            <div class="skill">
+            <div class="skill" @click="$emit('support')">
                 <img src="/assets/tech-logos/customer_support_logo.png" alt="Support" class="tech-img" style="height: 60px;"/>
                 <p class="skill-label">Customer Support</p>
             </div>
-            <div class="skill">
+            <div class="skill" @click="$emit('bpa')">
                 <img src="/assets/tech-logos/analytics_logo.png" alt="Support" class="tech-img" style="height: 60px;"/>
                 <p class="skill-label">Business Analytics</p>
             </div>
-            <div class="skill">
+            <div class="skill" @click="$emit('presentation')">
                 <img src="/assets/tech-logos/presentation.png" alt="Support" class="tech-img" style="height: 60px;"/>
                 <p class="skill-label">Presentation Skills</p>
             </div>
@@ -84,6 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .skill-label {

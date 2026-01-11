@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dot-net",
+    "title": "ASP.NET Core",
+    "description1": "Building robust, scalable web APIs and enterprise applications. Experienced with Entity Framework, clean architecture patterns, and RESTful service design. ",
+    "description2": "My go-to for backend solutions that need to handle complex business logic.",
+    "imagePath": "/assets/tech-logos/dotnet_logo.png"
+  },
+  {
+    "id": "vue",
+    "title": "Vue.js 2/3",
+    "description1": "Crafting responsive, reactive user interfaces with the progressive framework. Comfortable with Composition API, Vuex/Pinia state management, and component-based architecture.",
+    "description2": "I love Vue's elegant approach to building modern web experiences.",
+    "imagePath": "/assets/tech-logos/vue_logo.png"
+  },
+  {
+    "id": "js",
+    "title": "JS/TS",
+    "description1": "The foundation of modern web development. Strong grasp of ES6+, async patterns, and TypeScript's type safety benefits.",
+    "description2": "Whether vanilla JS or framework-specific, I write clean, maintainable code that scales.",
+    "imagePath": "/assets/tech-logos/js_logo.png"
+  },
+  {
+    "id": "git",
+    "title": "Version Control",
+    "description1": "Efficient branching strategies, meaningful commits, and collaborative workflows. Experienced with Git workflows, pull requests, and resolving merge conflicts.",
+    "description2": "Version control isn't just about saving code—it's about telling the story of a project.",
+    "imagePath": "/assets/tech-logos/git_logo.svg"
+  },
+  {
+    "id": "dynamics",
+    "title": "Microsoft Dynamics 365",
+    "description1": "Customizing and extending CRM solutions to fit unique business needs. Plugin development, custom workflows, and Power Platform integration.",
+    "description2": "Bridging the gap between business requirements and technical implementation.",
+    "imagePath": "/assets/tech-logos/dynamics_logo.png"
+  },
+  {
+    "id": "azure",
+    "title": "Microsoft Azure",
+    "description1": "Deploying and managing cloud infrastructure with confidence. Experience with App Services, Azure Functions, Storage, and CI/CD pipelines.",
+    "description2": "Cloud-native thinking for modern, scalable applications.",
+    "imagePath": "/assets/tech-logos/azure_logo.png"
+  },
+  {
+    "id": "support",
+    "title": "Customer Support",
+    "description1": "Understanding users is at the heart of great software. Patient communicator with a knack for translating technical concepts into plain language. I believe empathy makes better developers.",
+    "description2": "I believe empathy makes better developers.",
+    "imagePath": "/assets/tech-logos/customer_support_logo.png"
+  },
+  {
+    "id": "bpa",
+    "title": "Business Process Analysis",
+    "description1": "Analyzing business processes to identify optimization opportunities and digitalization pathways. Translating operational workflows into efficient CRM solutions that reduce manual work and improve data visibility.",
+    "description2": "I bridge the gap between how businesses work and how technology can make them work better.",
+    "imagePath": "/assets/tech-logos/analytics_logo.png"
+  },
+  {
+    "id": "presentation",
+    "title": "Presentation Skills",
+    "description1": "Communicating ideas clearly to both technical and non-technical audiences. From team demos to stakeholder presentations, I make complex topics accessible and engaging.",
+    "description2": "Great code means nothing if you can't explain why it matters.",
+    "imagePath": "/assets/tech-logos/presentation.png"
+  }
+]

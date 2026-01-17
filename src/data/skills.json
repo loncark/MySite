@@ -2,64 +2,73 @@
   {
     "id": "dot-net",
     "title": "ASP.NET Core",
-    "description1": "Building robust, scalable web APIs and enterprise applications. Experienced with Entity Framework, clean architecture patterns, and RESTful service design. ",
-    "description2": "My go-to for backend solutions that need to handle complex business logic.",
+    "description1": "During my studies, I have coded RESTful APIs both in Java and Python. However, after spending a year with .NET at work, I doubt I will ever be returning to those two.",
+    "description2": "The APIs I code today typically serve as three-layer backend applications that query the Dynamics CRM and prepare data for the frontend. ",
+    "description3": "When I am not writing APIs, I use .NET to code plugins and workflows that supplement the inbuilt functionalities of the CRM.",
     "imagePath": "/assets/tech-logos/dotnet_logo.png"
   },
   {
     "id": "vue",
-    "title": "Vue.js 2/3",
-    "description1": "Crafting responsive, reactive user interfaces with the progressive framework. Comfortable with Composition API, Vuex/Pinia state management, and component-based architecture.",
-    "description2": "I love Vue's elegant approach to building modern web experiences.",
+    "title": "Vue.js",
+    "description1": "A good colleague of mine first demonstrated Vue 3 to me in the last year of college. As a result, I ended up doing the frontend of my masters degree application in Vue 3.",
+    "description2": "I find this framework very efficatious, especially when used with Composition API and libraries like Vite, Pinia and PrimeVue.",
+    "description3": "Although these are my preference, I have also worked on applications that utilize Vue 2, Options API and Buefy. Also, this site was made using Vue 3 😊",
     "imagePath": "/assets/tech-logos/vue_logo.png"
   },
   {
     "id": "js",
     "title": "JS/TS",
-    "description1": "The foundation of modern web development. Strong grasp of ES6+, async patterns, and TypeScript's type safety benefits.",
-    "description2": "Whether vanilla JS or framework-specific, I write clean, maintainable code that scales.",
+    "description1": "College never taught me TypeScript so I wrote my masters thesis in JavaScript thinking it can't be that bad in practice... And then in Combis I got to work in a team.",
+    "description2": "This is when it struck me how much more practical type safety is: it just helps you understand your teammates code faster and make less mistakes.",
+    "description3": "ES6? I'd say I'm pretty familiar with it. Async-await is 🐐",
     "imagePath": "/assets/tech-logos/js_logo.png"
   },
   {
     "id": "git",
     "title": "Version Control",
-    "description1": "Efficient branching strategies, meaningful commits, and collaborative workflows. Experienced with Git workflows, pull requests, and resolving merge conflicts.",
-    "description2": "Version control isn't just about saving code—it's about telling the story of a project.",
+    "description1": "I am of the opinion that no activity binds teammates together better than resolving merge conflicts and restoring the stable main branch. If you haven't broken production once, you haven't lived.",
+    "description2": "Jokes aside, version control is not the strongest of my suits, but I do make great efforts to follow established protocols and deploy correct versions to production.",
+    "description3": "ChatGPT suggested I write \"iTs aBoUt tEllInG tHe sToRy oF a pRoJeCt\"... lol. Just communicate timely and don't break stuff.",
     "imagePath": "/assets/tech-logos/git_logo.svg"
   },
   {
     "id": "dynamics",
     "title": "Microsoft Dynamics 365",
-    "description1": "Customizing and extending CRM solutions to fit unique business needs. Plugin development, custom workflows, and Power Platform integration.",
-    "description2": "Bridging the gap between business requirements and technical implementation.",
+    "description1": "In my mind, the Dynamics CRM is a fancy database manager and I like it a lot. Business logic customization is very straightforward and offers possibilities that cover most clients' needs 99% time.",
+    "description2": "This of course includes writing custom plugins, scripts and webresources as well as security role management and custom document templates.",
+    "description3": "All this is supplemented by the knowledge of various tools from the XrmToolBox, primarily the Plugin Trace Viewer, the Plugin Registration Tool and the Ribbon Workbench.",
     "imagePath": "/assets/tech-logos/dynamics_logo.png"
   },
   {
     "id": "azure",
     "title": "Microsoft Azure",
-    "description1": "Deploying and managing cloud infrastructure with confidence. Experience with App Services, Azure Functions, Storage, and CI/CD pipelines.",
-    "description2": "Cloud-native thinking for modern, scalable applications.",
+    "description1": "I havent't yet found myself in a role where I have done a lot of cloud configuration, but some projects I have worked on have required coding Azure functions.",
+    "description2": "From what I have gathered, Azure is pretty essential to the CRM, so I expect to enhance my understanding of it quite soon. Stay tuned!",
+    "description3": "",
     "imagePath": "/assets/tech-logos/azure_logo.png"
   },
   {
     "id": "support",
     "title": "Customer Support",
-    "description1": "Understanding users is at the heart of great software. Patient communicator with a knack for translating technical concepts into plain language. I believe empathy makes better developers.",
-    "description2": "I believe empathy makes better developers.",
+    "description1": "99% of the time, developers provide solutions for non-IT people so a bit of patience and teaching proclivity is required as a part of the job.",
+    "description2": "This often reminds me of math tutoring. We assemble to solve a problem and do our best to find the easiest and most practical solution.",
+    "description3": "In my experience, a dev is happiest when this role can be delegated to the business analyst; however, our technical expertise often takes us in many different directions during development.",
     "imagePath": "/assets/tech-logos/customer_support_logo.png"
   },
   {
     "id": "bpa",
     "title": "Business Process Analysis",
-    "description1": "Analyzing business processes to identify optimization opportunities and digitalization pathways. Translating operational workflows into efficient CRM solutions that reduce manual work and improve data visibility.",
-    "description2": "I bridge the gap between how businesses work and how technology can make them work better.",
+    "description1": "Software development is a cyclical process, and every iteration naturally brings new ideas.",
+    "description2": "These ideas are difficult to implement without the knowledge of underlying business processes and, in my experience, the same patterns frequently repeat across many different clients.",
+    "description3": "Sometimes the client is ready to adapt to a completely new system, and sometimes the CRM is designed to emulate an already existing system. Either way, the goal is to simplify their life as much a s possible.",
     "imagePath": "/assets/tech-logos/analytics_logo.png"
   },
   {
     "id": "presentation",
     "title": "Presentation Skills",
-    "description1": "Communicating ideas clearly to both technical and non-technical audiences. From team demos to stakeholder presentations, I make complex topics accessible and engaging.",
-    "description2": "Great code means nothing if you can't explain why it matters.",
+    "description1": "I always thought my English teachers went a bit overboard with all the speaking exercises we did in school. Turns out, these skills really are invaluable in a job where interaction with clients is a daily occurence.",
+    "description2": "My professional presentations typically include demonstrating new functionalities of the CRM to the client; however, I am capable of presenting any topic (both in Croatian and English) as long as I get to adequately prepare. ",
+    "description3": "",
     "imagePath": "/assets/tech-logos/presentation.png"
   }
 ]

@@ -11,7 +11,7 @@
           </div>
           <div class="skill" @click="$emit('vue')">
             <img src="/assets/tech-logos/vue_logo.png" alt="Vue" class="tech-img"/>
-            <p class="skill-label">Vue.js 2/3</p>
+            <p class="skill-label">Vue.js</p>
           </div>
           <div class="skill" @click="$emit('js')">
             <div class="flex flex-row align-center justify-center gap-2 self-center">

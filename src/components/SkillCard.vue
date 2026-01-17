@@ -10,13 +10,14 @@
       <img v-else-if="props.skill.id == 'git'" src="/assets/tech-logos/git_logo.svg" alt="Git" class="tech-img"/>
       <img v-else-if="props.skill.id == 'dynamics'" src="/assets/tech-logos/dynamics_logo.png" alt="Dynamics 365" class="tech-img"/>
       <img v-else-if="props.skill.id == 'azure'" src="/assets/tech-logos/azure_logo.png" alt="Azure" class="tech-img"/>
-      <img v-else-if="props.skill.id == 'support'" src="/assets/tech-logos/customer_support_logo.png" alt="Support" class="tech-img"/>
-      <img v-else-if="props.skill.id == 'bpa'" src="/assets/tech-logos/analytics_logo.png" alt="Analytics" class="tech-img"/>
-      <img v-else-if="props.skill.id == 'presentation'" src="/assets/tech-logos/presentation.png" alt="Presentation Skills" class="tech-img"/>
+      <img v-else-if="props.skill.id == 'support'" src="/assets/tech-logos/customer_support_logo.png" alt="Support" class="tech-img" style="width: 100px;"/>
+      <img v-else-if="props.skill.id == 'bpa'" src="/assets/tech-logos/analytics_logo.png" alt="Analytics" class="tech-img" style="width: 100px;"/>
+      <img v-else-if="props.skill.id == 'presentation'" src="/assets/tech-logos/presentation.png" alt="Presentation Skills" class="tech-img" style="width: 100px;"/>
       <p class="text-center">{{ props.skill.title }}</p>
     </div>
     <p class="text-sm">{{ props.skill.description1 }}</p>
     <p class="text-sm mt-4">{{ props.skill.description2 }}</p>
+    <p class="text-sm mt-4">{{ props.skill.description3 }}</p>
   </div>
 </template>
 

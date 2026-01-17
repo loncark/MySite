@@ -14,6 +14,7 @@ export class SkillService {
       title: item.title,
       description1: item.description1,
       description2: item.description2,
+      description3: item.description3,
       imagePath: item.imagePath
     }));
   }

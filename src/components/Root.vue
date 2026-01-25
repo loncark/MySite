@@ -10,8 +10,10 @@
         <p>Welcome to my website!</p>
       </div>
       <div v-else key="third" class="main-content">
-        <SkillCard v-if="showSkillCard && currentSkill" :skill="currentSkill"/>
-        <StaticCard v-else/>
+        <FlipCard 
+          :flipCardContent="flipCardContent" 
+          :flipCardProps="flipCardProps"
+        />
 
         <div class="card-container">
           <Transition name="swap" mode="out-in">
@@ -41,12 +43,13 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import Background from "./Background.vue";
-import StaticCard from "./StaticCard.vue";
-import Card1 from "./flip-cards/Card1.vue";
-import Card2 from "./flip-cards/Card2.vue";
-import SkillCard from "./SkillCard.vue";
+import Card1 from "./cards/Card1.vue";
+import Card2 from "./cards/Card2.vue";
+import SkillCard from "./cards/SkillCard.vue";
 import { SkillService } from "../service/SkillService";
 import { Skill } from "../model/Model";
+import FlipCard from "./cards/FlipCard.vue";
+import ProfileCard from "./cards/ProfileCard.vue";
 
 const showFirstScreen = ref(true); // true
 const showSecondScreen = ref(false);
@@ -59,14 +62,22 @@ const showCard2 = ref(false);
 
 const skillService = new SkillService();
 const currentSkill = ref<Skill | undefined>();
+const flipCardContent = ref<Object>(ProfileCard);
+const flipCardProps = ref<Object>({});
 
 function handleSkillEmit(skillId: string) {
   currentSkill.value = skillService.getSkillById(skillId);
   showSkillCard.value = true;
+
+  flipCardContent.value = SkillCard;
+  flipCardProps.value = { skill: currentSkill.value };
 }
 function handleSkillCardCancel() {
   showSkillCard.value = false;
   currentSkill.value = undefined;
+
+  flipCardContent.value = ProfileCard;
+  flipCardProps.value = {};
 }
 
 onMounted(() => {
@@ -82,14 +93,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
-.root-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
+<style>
 .glass-card {
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(30px);
@@ -98,13 +102,22 @@ onMounted(() => {
   padding: 30px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
-.padding-special {
-  padding: 10px 20px 10px 20px
-}
-
 .glass-card > p {
   margin: 0;
   text-align: center;
+}
+</style>
+
+<style scoped>
+.root-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.padding-special {
+  padding: 10px 20px 10px 20px
 }
 
 .main-content {

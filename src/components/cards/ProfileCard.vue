@@ -1,5 +1,5 @@
 <template>
-  <div class="static-card glass-card">
+  <div>
     <img
       src="/assets/profile_cropped.png"
       alt="Profile Picture"
@@ -35,15 +35,6 @@
 </template>
 
 <style scoped>
-.static-card {
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 .profile-pic {
   aspect-ratio: 1 / 1;
   border: 1px solid black;

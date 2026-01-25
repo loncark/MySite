@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <p class="self-end mt-auto button-class" @click="$emit('go-card2')">Skills ￫</p>
+    <p class="button-class" @click="$emit('go-card2')">Skills ￫</p>
   </div>
 </template>
 
@@ -66,6 +66,8 @@
   cursor: pointer;
   border: 1px solid black;
   border-radius: 25px;
+  align-self: end;
+  margin-top: auto !important;
 }
 .button-class:hover {
   background-color: rgba(0, 0, 0, 0.05);

@@ -1,9 +1,9 @@
 <template>
-  <div class="static-card glass-card">
+  <div>
     <div class="skill">
       <img v-if="props.skill.id == 'dot-net'" src="/assets/tech-logos/dotnet_logo.png" alt=".NET" class="tech-img"/>
       <img v-else-if="props.skill.id == 'vue'" src="/assets/tech-logos/vue_logo.png" alt="Vue.js" class="tech-img"/>
-      <div v-else-if="props.skill.id == 'js'"class="flex flex-row align-center justify-center gap-2 self-center">
+      <div v-else-if="props.skill.id == 'js'"class="grid grid-cols-2 place-items-center justify-self-center">
         <img src="/assets/tech-logos/js_logo.png" alt="JavaScript" class="tech-img" style="width: 80px; border-radius: 5px;"/>
         <img src="/assets/tech-logos/ts_logo.png" alt="TypeScript" class="tech-img" style="width: 80px; border-radius: 5px;"/>
       </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Skill } from "../model/Model";
+import type { Skill } from "../../model/Model";
 
 const props = defineProps<{
   skill: Skill;
@@ -31,15 +31,6 @@ const props = defineProps<{
 </script>
 
 <style scoped>
-.static-card {
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
 .skill {
   display: flex;
   flex-direction: column;
@@ -50,10 +41,10 @@ const props = defineProps<{
 }
 
 .tech-img {
-  width: 80%;
+  max-width: 80%;
+  max-height: 100px;
   margin: auto;
   align-self: center;
-  max-height: 100px;
 }
 
 </style>

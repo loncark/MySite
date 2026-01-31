@@ -42,7 +42,7 @@
             </div>
             <div class="skill" @click="$emit('bpa')">
                 <img src="/assets/tech-logos/analytics_logo.png" alt="Support" class="tech-img" style="height: 60px;"/>
-                <p class="skill-label">Business Analytics</p>
+                <p class="skill-label">Business Process Analysis</p>
             </div>
             <div class="skill" @click="$emit('presentation')">
                 <img src="/assets/tech-logos/presentation.png" alt="Support" class="tech-img" style="height: 60px;"/>

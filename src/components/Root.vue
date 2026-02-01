@@ -158,11 +158,11 @@ onMounted(() => {
 }
 .rotate-enter-active {
   transform-style: preserve-3d;
-  transition: transform 0.4s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .rotate-leave-active {
   transform-style: preserve-3d;
-  transition: transform 0.4s ease-in;
+  transition: transform 0.3s ease-in;
 }
 .rotate-leave-to {
   transform: perspective(500px) rotateY(90deg);

@@ -10,10 +10,15 @@
         <p>Welcome to my website!</p>
       </div>
       <div v-else key="third" class="main-content">
-        <FlipCard 
-          :flipCardContent="flipCardContent" 
-          :flipCardProps="flipCardProps"
-        />
+        <div class="card-container">
+          <Transition name="rotate" mode="out-in">
+            <FlipCard 
+              :key="refreshKey"
+              :flipCardContent="flipCardContent" 
+              :flipCardProps="flipCardProps"
+            />
+          </Transition>
+        </div>
 
         <div class="card-container">
           <Transition name="swap" mode="out-in">
@@ -65,12 +70,19 @@ const currentSkill = ref<Skill | undefined>();
 const flipCardContent = ref<Object>(ProfileCard);
 const flipCardProps = ref<Object>({});
 
+const refreshKey = ref<number>(0);
+
 function handleSkillEmit(skillId: string) {
+  if (currentSkill.value && currentSkill.value.id === skillId) {
+    return;
+  }
   currentSkill.value = skillService.getSkillById(skillId);
   showSkillCard.value = true;
 
   flipCardContent.value = SkillCard;
   flipCardProps.value = { skill: currentSkill.value };
+
+  refreshKey.value++; // animation trigger
 }
 function handleSkillCardCancel() {
   showSkillCard.value = false;
@@ -78,6 +90,8 @@ function handleSkillCardCancel() {
 
   flipCardContent.value = ProfileCard;
   flipCardProps.value = {};
+
+  refreshKey.value++; // animation trigger
 }
 
 onMounted(() => {
@@ -136,6 +150,22 @@ onMounted(() => {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* Rotate transition styles */
+.rotate-enter-from {
+  transform: perspective(500px) rotateY(-90deg);
+}
+.rotate-enter-active {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-out;
+}
+.rotate-leave-active {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+}
+.rotate-leave-to {
+  transform: perspective(500px) rotateY(90deg);
 }
 
 /* Fade transition styles */

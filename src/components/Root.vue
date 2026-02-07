@@ -9,7 +9,7 @@
       <div v-else-if="showSecondScreen" key="second" class="glass-card padding-special">
         <p>Welcome to my website!</p>
       </div>
-      <div v-else key="third" class="main-content">
+      <div v-else-if="showThirdScreen" key="third" class="main-content">
         <div class="card-container">
           <Transition name="rotate" mode="out-in">
             <FlipCard 
@@ -56,7 +56,7 @@ import { Skill } from "../model/Model";
 import FlipCard from "./cards/FlipCard.vue";
 import ProfileCard from "./cards/ProfileCard.vue";
 
-const showFirstScreen = ref(true); // true
+const showFirstScreen = ref(false);
 const showSecondScreen = ref(false);
 const showThirdScreen = ref(false);
 
@@ -95,6 +95,10 @@ function handleSkillCardCancel() {
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    showFirstScreen.value = true;
+  }, 300);
+
   setTimeout(() => {
     showFirstScreen.value = false;
     showSecondScreen.value = true;

@@ -67,7 +67,9 @@ function animatePetals() {
 }
 
 onMounted(() => {
-  animatePetals();
+  setTimeout(() => {
+    animatePetals();
+  }, 500);
 });
 
 </script>

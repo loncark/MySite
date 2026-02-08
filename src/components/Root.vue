@@ -85,9 +85,13 @@ function handleSkillEmit(skillId: string) {
   refreshKey.value++; // animation trigger
 }
 function handleSkillCardCancel() {
+  if (currentSkill.value === undefined) {
+    return;
+  }
+  
   showSkillCard.value = false;
   currentSkill.value = undefined;
-
+  
   flipCardContent.value = ProfileCard;
   flipCardProps.value = {};
 

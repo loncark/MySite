@@ -39,6 +39,7 @@
   aspect-ratio: 1 / 1;
   border: 1px solid black;
   border-radius: 50%;
+  margin: auto;
 }
 
 .adaptable-grid {

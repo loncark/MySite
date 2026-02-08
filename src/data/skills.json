@@ -20,7 +20,7 @@
     "title": "JS/TS",
     "description1": "College never taught me TypeScript so I wrote my masters thesis in JavaScript thinking it can't be that bad in practice... And then in Combis I got to work in a team.",
     "description2": "This is when it struck me how much more practical type safety is: it just helps you understand your teammates code faster and make less mistakes.",
-    "description3": "ES6? I'd say I'm pretty familiar with it. Async-await is 🐐",
+    "description3": "ES6 is the way of life.",
     "imagePath": "/assets/tech-logos/js_logo.png"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Version Control",
     "description1": "I am of the opinion that no activity binds teammates together better than resolving merge conflicts and restoring the stable main branch. If you haven't broken production once, you haven't lived.",
     "description2": "Jokes aside, version control is not the strongest of my suits, but I do make great efforts to follow established protocols and deploy correct versions to production.",
-    "description3": "ChatGPT suggested I write \"iTs aBoUt tEllInG tHe sToRy oF a pRoJeCt\"... lol. Just communicate timely and don't break stuff.",
+    "description3": "ChatGPT suggested I write \"iTs aBoUt tEllInG tHe sToRy oF a pRoJeCt\"... lol. Go home GPT, you're drunk.",
     "imagePath": "/assets/tech-logos/git_logo.svg"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Microsoft Dynamics 365",
     "description1": "In my mind, the Dynamics CRM is a fancy database manager and I like it a lot. Business logic customization is very straightforward and offers possibilities that cover most clients' needs 99% time.",
     "description2": "This of course includes writing custom plugins, scripts and webresources as well as security role management and custom document templates.",
-    "description3": "All this is supplemented by the knowledge of various tools from the XrmToolBox, primarily the Plugin Trace Viewer, the Plugin Registration Tool and the Ribbon Workbench.",
+    "description3": "All this is supplemented by the knowledge of various tools from the XrmToolBox, primarily the Plugin Trace Viewer, the Auto Number Manager and the Ribbon Workbench.",
     "imagePath": "/assets/tech-logos/dynamics_logo.png"
   },
   {
